@@ -1,28 +1,18 @@
-// function
-// the following functions are equivalent
-twice(x) => x * 2;
-
-twice2(x) {
-  return x * 2;
-}
-
-// the following functions are equivalent
-
-max(x, y) {
-  if (x > y)
-    return x;
-  else
-    return y;
-}
-
-max2(x, y) => (x > y) ? x : y;
-
-maxElement(a) {
-  var currentMax =
-      a.isEmpty ? throw 'Maximumal element undefined for empty array' : a[0];
-
-  for (var i = 0; i < a.length; i++) {
-    currentMax = max(a[i], currentMax);
+// class
+class Point {
+  var x, y;
+  Point(a, b) {
+    x = a;
+    y = b;
   }
-  return currentMax;
+}
+
+// use new to create an instance
+var origin = new Point(0, 0);
+var aPoint = new Point(3, 4);
+
+// another way to declar a class
+class PointV2 {
+  var x, y;
+  PointV2(this.x, this.y);
 }
