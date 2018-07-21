@@ -1,4 +1,6 @@
-// class
+// library
+library points;
+
 import 'dart:math';
 
 class Point {
@@ -14,10 +16,4 @@ class Point {
     var dy = p1.y - p2.y;
     return sqrt(dx * dx + dy * dy);
   }
-}
-
-void main() {
-  var aPoint = new Point(5, 1);
-  var bPoint = new Point(3, 4);
-  print(Point.distance(aPoint, bPoint));
 }
