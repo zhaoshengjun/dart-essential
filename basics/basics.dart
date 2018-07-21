@@ -1,18 +1,12 @@
 // class
 class Point {
   var x, y;
-  Point(a, b) {
-    x = a;
-    y = b;
-  }
+  Point(this.x, this.y);
+
+  scale(factor) => new Point(x * factor, y * factor);
 }
 
-// use new to create an instance
-var origin = new Point(0, 0);
-var aPoint = new Point(3, 4);
-
-// another way to declar a class
-class PointV2 {
-  var x, y;
-  PointV2(this.x, this.y);
+void main() {
+  var bPoint = new Point(3, 4);
+  print(bPoint.scale(4).x);
 }
