@@ -4,9 +4,12 @@ class Point {
   Point(this.x, this.y);
 
   scale(factor) => new Point(x * factor, y * factor);
+
+  operator +(p) => new Point(x + p.x, y + p.y);
 }
 
 void main() {
+  var aPoint = new Point(5, 1);
   var bPoint = new Point(3, 4);
-  print(bPoint.scale(4).x);
+  print((aPoint + bPoint).x);
 }
