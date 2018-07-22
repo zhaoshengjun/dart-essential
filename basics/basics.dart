@@ -2,7 +2,10 @@ import 'dart:math';
 
 class Point {
   var rho, theta;
-  Point(this.rho, this.theta);
+  Point(a, b) {
+    rho = sqrt(a * a + b * b);
+    theta = atan(a / b);
+  }
   get x => rho * cos(theta);
   get y => rho * sin(theta);
   set x(newX) {
