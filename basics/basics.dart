@@ -3,6 +3,11 @@ class Point {
 
   Point(this.x, this.y);
 
+  // override this method with care:
+  // the == should be:
+  // - reflexive: a == a
+  // - transitive: a == b && b ==c, hence a == c
+  // - commutative: a == b, hence b == a
   operator ==(p) => identical(this, p);
 }
 
