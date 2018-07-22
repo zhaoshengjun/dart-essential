@@ -1,14 +1,14 @@
 class Point {
   var x, y;
-
   Point(this.x, this.y);
+}
 
-  // override this method with care:
-  // the == should be:
-  // - reflexive: a == a
-  // - transitive: a == b && b ==c, hence a == c
-  // - commutative: a == b, hence b == a
-  operator ==(p) => identical(this, p);
+class Point3D extends Point {
+  var z;
+
+  Point3D(a, b, c) : super(a, b) {
+    z = c;
+  }
 }
 
 void main() {
