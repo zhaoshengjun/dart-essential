@@ -9,6 +9,8 @@ class Point {
 
   get x => rho * cos(theta);
   get y => rho * sin(theta);
+  // can use getters directly inside other methods
+  //  even the getter variables are not declared.
   scale(factor) => new Point(x * factor, y * factor);
   operator +(p) => new Point(x + p.x, y + p.y);
 
