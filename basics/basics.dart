@@ -3,7 +3,7 @@ class Point {
 
   Point(this.x, this.y);
 
-  operator ==(p) => x == p.x && y == p.y;
+  operator ==(p) => identical(this, p);
 }
 
 void main() {
