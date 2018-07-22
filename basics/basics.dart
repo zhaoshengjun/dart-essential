@@ -3,8 +3,8 @@ import 'dart:math';
 class Point {
   var rho, theta;
   Point(this.rho, this.theta);
-  x() => rho * cos(theta);
-  y() => rho * sin(theta);
+  get x => rho * cos(theta);
+  get y => rho * sin(theta);
   scale(factor) => new Point(rho * factor, theta);
   operator +(p) => new Point(x() + p.x(), y() + p.y());
   static distance(p1, p2) {
