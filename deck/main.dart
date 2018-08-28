@@ -21,10 +21,14 @@ class Card {
   Rank rank;
 
   Card(this.suit, this.rank);
+
+  toString() {
+    return "$suit - $rank";
+  }
 }
 
 class Deck {
-  List<Card> cards;
+  List<Card> cards = [];
 
   Deck() {
     Suit.values.forEach((s) {
@@ -34,9 +38,18 @@ class Deck {
     });
   }
 
+  toString() {
+    return cards.toString();
+  }
+
   printCards() {}
   shuffle() {}
 
   deal() {}
   removeCard() {}
+}
+
+void main() {
+  var deck = new Deck();
+  print(deck);
 }
