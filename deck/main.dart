@@ -47,6 +47,10 @@ class Deck {
     cards.shuffle();
   }
 
+  cardsWithSuit(Suit suit) {
+    return cards.where((card) => card.suit == suit);
+  }
+
   deal() {}
   removeCard() {}
 }
@@ -54,5 +58,5 @@ class Deck {
 void main() {
   var deck = new Deck();
   deck.shuffle();
-  print(deck);
+  print(deck.cardsWithSuit(Suit.Diamond));
 }
