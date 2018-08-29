@@ -51,12 +51,19 @@ class Deck {
     return cards.where((card) => card.suit == suit);
   }
 
-  deal() {}
+  deal(int size) {
+    var hand = cards.sublist(0, size);
+    cards.removeRange(0, size);
+    return hand;
+  }
+
   removeCard() {}
 }
 
 void main() {
   var deck = new Deck();
-  deck.shuffle();
-  print(deck.cardsWithSuit(Suit.Diamond));
+  print(deck.cards.length);
+  var hand = deck.deal(5);
+  print(deck.cards.length);
+  print(hand.toString());
 }
