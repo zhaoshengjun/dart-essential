@@ -43,7 +43,9 @@ class Deck {
   }
 
   printCards() {}
-  shuffle() {}
+  shuffle() {
+    cards.shuffle();
+  }
 
   deal() {}
   removeCard() {}
@@ -51,5 +53,6 @@ class Deck {
 
 void main() {
   var deck = new Deck();
+  deck.shuffle();
   print(deck);
 }
