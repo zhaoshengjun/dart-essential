@@ -57,7 +57,9 @@ class Deck {
     return hand;
   }
 
-  removeCard() {}
+  removeCard(Rank rank, Suit suit) {
+    cards.removeWhere((card) => card.suit == suit && card.rank == rank);
+  }
 }
 
 void main() {
