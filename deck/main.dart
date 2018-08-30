@@ -20,7 +20,7 @@ class Card {
   Suit suit;
   Rank rank;
 
-  Card(this.suit, this.rank);
+  Card({this.suit, this.rank});
 
   toString() {
     return "$suit - $rank";
@@ -33,7 +33,7 @@ class Deck {
   Deck() {
     Suit.values.forEach((s) {
       Rank.values.forEach((r) {
-        cards.add(new Card(s, r));
+        cards.add(new Card(suit: s, rank: r));
       });
     });
   }
