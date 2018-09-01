@@ -4,7 +4,7 @@ void main() {
   var rawJson = '{ "url":"http://blah.jpg",    "id":1 }';
 
   var parsedJson = json.decode(rawJson);
-  var model = new ImageModel(parsedJson['id'], parsedJson['url']);
+  var model = new ImageModel.fromJson(parsedJson);
   print(model);
 }
 
@@ -13,4 +13,9 @@ class ImageModel {
   String url;
 
   ImageModel(this.id, this.url);
+
+  ImageModel.fromJson(jsonData) {
+    id = jsonData['id'];
+    url = jsonData['url'];
+  }
 }
