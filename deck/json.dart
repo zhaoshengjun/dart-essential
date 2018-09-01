@@ -14,8 +14,7 @@ class ImageModel {
 
   ImageModel(this.id, this.url);
 
-  ImageModel.fromJson(Map<String, dynamic> jsonData) {
-    id = jsonData['id'];
-    url = jsonData['url'];
-  }
+  ImageModel.fromJson(Map<String, dynamic> jsonData)
+      : id = jsonData['id'],
+        url = jsonData['url'];
 }
